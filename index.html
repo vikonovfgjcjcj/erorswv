@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Системная ошибка Windows</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .error-window {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            position: relative;
+        }
+
+        .error-header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .error-header .icon {
+            width: 32px;
+            height: 32px;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==') no-repeat center;
+            background-color: #e67e22;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .error-header .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .error-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .error-footer {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .error-footer button {
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .error-footer button:hover {
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-window">
+        <div class="error-header">
+            <div class="icon"></div>
+            <div class="title">Критическая ошибка системы</div>
+        </div>
+        
+        <div class="error-content">
+            <p>Произошла непредвиденная ошибка при работе системы.</p>
+            <p>Код ошибки: 0x80070002</p>
+            <p>Дополнительные сведения:</p>
+            <ul>
+                <li>Файл: <strong>ntoskrnl.exe</strong></li>
+                <li>Процесс: <strong>System</strong></li>
+                <li>Время: <strong>28.07.2025 08:54:57</strong></li>
+            </ul>
+        </div>
+        
+        <div class="error-footer">
+            <button onclick="closeWindow()">ОК</button>
+        </div>
+    </div>
+
+    <script>
+        function closeWindow() {
+            alert("Ошибка обработана. Система будет перезагружена.");
+            // Здесь можно добавить код для имитации перезагрузки
+        }
+    </script>
+</body>
+</html>
